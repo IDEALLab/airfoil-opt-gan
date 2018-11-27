@@ -153,11 +153,11 @@ Slice 5:
 
 Optimization history:
 
-![Alt text](/opt_resutls/opt_history.svg)
+![Alt text](/opt_results/opt_history.svg)
 
 Optimal arifoils:
 
-![Alt text](/opt_resutls/opt_airfoils.svg)
+![Alt text](/opt_results/opt_airfoils.svg)
 
 
 
