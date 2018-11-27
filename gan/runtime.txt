@@ -1,0 +1,1 @@
+Wall clock time for training: 1.00752018279 hr
