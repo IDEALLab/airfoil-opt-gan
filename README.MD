@@ -11,7 +11,7 @@ Latent space exploration for the airfoil shape design.
 
 ## Usage
 
-### Train/evaluate GANs
+### Train/evaluate BezierGAN
 
 ```bash
 python train.py
