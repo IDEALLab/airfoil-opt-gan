@@ -129,25 +129,9 @@ The raw data contains variable number of points along airfoil curves. We created
 
 ### Latent space learned by BezierGAN
 
-Slice 1:
-
-![Alt text](/gan/synthesized_0.00.svg)
-
-Slice 2:
-
-![Alt text](/gan/synthesized_0.25.svg)
-
-Slice 3:
-
-![Alt text](/gan/synthesized_0.50.svg)
-
-Slice 4:
-
-![Alt text](/gan/synthesized_0.75.svg)
-
-Slice 5:
-
-![Alt text](/gan/synthesized_1.00.svg)
+c<sub>3</sub> = 0.00			|c<sub>3</sub> = 0.50			   |c<sub>3</sub> = 1.00
+:--------------------------------------:|:----------------------------------------:|:--------------------------------------:
+![Alt text](/gan/synthesized_0.00.svg)  |  ![Alt text](/gan/synthesized_0.50.svg)  |  ![Alt text](/gan/synthesized_1.00.svg)
 
 ### Optimization
 
