@@ -1,4 +1,4 @@
-# airfoil-manifold
+# airfoil-opt-gan
 
 Latent space exploration for the airfoil shape design.
 
@@ -32,10 +32,26 @@ optional arguments:
 
 ### Run optimization
 
+Note: When optimizing using BezierGAN + EGO or BezierGAN + EGO + GA refining, BezierGAN has to be trained first. It takes about one hour on a Nvidia Titan X GPU. If you don't want to train it yourself, send an email to <wchen459@umd.edu>, and I'll send you a copy of my trained model.
+
 #### BezierGAN + EGO
 
 ```bash
 python optimize_gan_bo.py
+```
+
+optional arguments:
+
+```
+--n_runs		number of runs
+--n_eval		number of evaluations per run
+-h, --help            	show this help message and exit
+```
+
+#### BezierGAN + EGO + GA refining
+
+```bash
+python optimize_gan_2_ga.py
 ```
 
 optional arguments:
