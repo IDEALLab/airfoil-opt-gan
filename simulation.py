@@ -1,4 +1,5 @@
 #import os
+import ConfigParser
 import pexpect
 #import subprocess as sp
 import gc
@@ -103,11 +104,14 @@ def compute_coeff(airfoil, reynolds=500000, mach=0, alpha=3, n_iter=200):
     return CL, CD
 
 def evaluate(airfoil, return_CL_CD=False):
+    
     # Airfoil operating conditions
-    reynolds = 1.8e6
-    mach = 0.01
-    alpha = 0
-    n_iter = 200
+    Config = ConfigParser.ConfigParser()
+    Config.read("op_conditions.ini")
+    reynolds = float(Config.get('OperatingConditions', 'Reynolds'))
+    mach = float(Config.get('OperatingConditions', 'Mach'))
+    alpha = float(Config.get('OperatingConditions', 'Alpha'))
+    n_iter = int(Config.get('OperatingConditions', 'N_iter'))
     
     CL, CD = compute_coeff(airfoil, reynolds, mach, alpha, n_iter)
     perf = CL/CD
@@ -126,9 +130,12 @@ if __name__ == "__main__":
     airfoils = np.load('airfoil_interp.npy')
     airfoil = airfoils[np.random.choice(airfoils.shape[0])]
     
-    reynolds = 1.8e6
-    mach = 0.01
-    alpha = 0
-    n_iter = 200
+    Config = ConfigParser.ConfigParser()
+    Config.read("op_conditions.ini")
+    reynolds = float(Config.get('OperatingConditions', 'Reynolds'))
+    mach = float(Config.get('OperatingConditions', 'Mach'))
+    alpha = float(Config.get('OperatingConditions', 'Alpha'))
+    n_iter = int(Config.get('OperatingConditions', 'N_iter'))
+    
     CL, CD = compute_coeff(airfoil, reynolds, mach, alpha, n_iter)
     print(CL, CD, CL/CD)
