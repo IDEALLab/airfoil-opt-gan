@@ -2,6 +2,22 @@
 
 Latent space exploration for the airfoil shape design.
 
+## License
+This code is licensed under the MIT license. Feel free to use all or portions for your research or related projects so long as you provide the following citation information:
+
+Wei Chen, Kevin Chiu, and Mark Fuge. "Aerodynamic Design Optimization and Shape Exploration using Generative Adversarial Networks", AIAA Scitech 2019 Forum, AIAA SciTech Forum, (AIAA 2019-2351) 
+https://doi.org/10.2514/6.2019-2351
+
+    @inproceedings{chen2019aerodynamic,
+	    author={Chen, Wei and Chiu, Kevin and Fuge, Mark},
+	    title={Aerodynamic Design Optimization and Shape Exploration using Generative Adversarial Networks},
+	    booktitle={AIAA SciTech Forum},
+	    year={2019},
+	    month={Jan},
+	    publisher={AIAA},
+	    address={San Diego, USA}
+	}
+
 ## Required packages
 
 - tensorflow 1.6.0
