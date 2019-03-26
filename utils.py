@@ -17,6 +17,19 @@ from matplotlib import pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
 
+def optimize_kde(X):
+    # use grid search cross-validation to optimize the bandwidth
+    params = {'bandwidth': np.logspace(-3, 1, 20)}
+    grid = GridSearchCV(KernelDensity(), params, n_jobs=8, cv=5, verbose=1)
+    grid.fit(X)
+    
+    print("best bandwidth: {0}".format(grid.best_estimator_.bandwidth))
+    
+    # use the best estimator to compute the kernel density estimate
+    kde = grid.best_estimator_
+    
+    return kde
+
 def convert_sec(sec):
     if sec < 60:
         return "%.2f sec" % sec
