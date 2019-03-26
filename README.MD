@@ -1,6 +1,22 @@
-# airfoil-manifold
+# airfoil-opt-gan
 
 Latent space exploration for the airfoil shape design.
+
+## License
+This code is licensed under the MIT license. Feel free to use all or portions for your research or related projects so long as you provide the following citation information:
+
+Wei Chen, Kevin Chiu, and Mark Fuge. "Aerodynamic Design Optimization and Shape Exploration using Generative Adversarial Networks", AIAA Scitech 2019 Forum, AIAA SciTech Forum, (AIAA 2019-2351) 
+https://doi.org/10.2514/6.2019-2351
+
+    @inproceedings{chen2019aerodynamic,
+	    author={Chen, Wei and Chiu, Kevin and Fuge, Mark},
+	    title={Aerodynamic Design Optimization and Shape Exploration using Generative Adversarial Networks},
+	    booktitle={AIAA SciTech Forum},
+	    year={2019},
+	    month={Jan},
+	    publisher={AIAA},
+	    address={San Diego, USA}
+	}
 
 ## Required packages
 
@@ -32,10 +48,28 @@ optional arguments:
 
 ### Run optimization
 
+Note: 
+* When optimizing using BezierGAN + EGO or BezierGAN + EGO + GA refining, BezierGAN has to be trained first. It takes about one hour on a Nvidia Titan X GPU. If you don't want to train it yourself, send an email to <wchen459@umd.edu>, and I'll send you a copy of my trained model.
+* You can modify the airfoil operating conditions (i.e., Reynolds number, Mach number, angle of attack, and number of iterations) in the file ```op_conditions.ini```.
+
 #### BezierGAN + EGO
 
 ```bash
 python optimize_gan_bo.py
+```
+
+optional arguments:
+
+```
+--n_runs		number of runs
+--n_eval		number of evaluations per run
+-h, --help            	show this help message and exit
+```
+
+#### BezierGAN + EGO + GA refining
+
+```bash
+python optimize_gan_2_ga.py
 ```
 
 optional arguments:
