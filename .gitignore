@@ -1,0 +1,4 @@
+trained_gan/*
+tmp/*
+*.pyc
+*/*.pyc
