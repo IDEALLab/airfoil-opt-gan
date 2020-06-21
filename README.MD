@@ -1,5 +1,7 @@
 # airfoil-opt-gan
 
+Please check our latest [code](https://github.com/IDEALLab/bezier-gan) and [paper](https://arxiv.org/pdf/to.be.added.pdf) for Bézier Generative Adversarial Networks (Bézier-GAN).
+
 Latent space exploration for the airfoil shape design.
 
 ## License
