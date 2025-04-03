@@ -51,7 +51,7 @@ optional arguments:
 ### Run optimization
 
 Note: 
-* When optimizing using BezierGAN + EGO or BezierGAN + EGO + GA refining, BezierGAN has to be trained first. It takes about one hour on a Nvidia Titan X GPU. If you don't want to train it yourself, send an email to <wchen459@umd.edu>, and I'll send you a copy of my trained model.
+* When optimizing using BezierGAN + EGO or BezierGAN + EGO + GA refining, BezierGAN has to be trained first. It takes about one hour on a Nvidia Titan X GPU. You can download the [trained model](https://drive.google.com/drive/folders/1BxLO2eM_PYLB4k8TPClTSBEC-eYj3keQ?usp=share_link), unzip the `trained_gan` folder, and put the folder into `airfoil-opt-gan`.
 * You can modify the airfoil operating conditions (i.e., Reynolds number, Mach number, angle of attack, and number of iterations) in the file ```op_conditions.ini```.
 
 #### BezierGAN + EGO
